@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie8" lang="zh-CN"><![endif]-->
+<!--[if IE 9]>
+<html class="ie9" lang="zh-CN"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+    <title>myLove</title>
+
+
+    <meta charset="utf-8"/>
+    <!--[if IE]>
+    <meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1"/><![endif]-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+
+    <!-- <link href='http://fonts.useso.com/css?family=Raleway:400,300,500,600,700,200,100,800' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/iCheck/skins/all.css">
+    <link rel="stylesheet" href="assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/plugins/select2/select2.css"/>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles-responsive.css">
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/themes/theme-default.css" type="text/css" id="skin_color">
+    <link rel="stylesheet" href="assets/css/print.css" type="text/css" media="print"/>
+
+</head>
+
+<body>
+
+<div class="main-wrapper">
+
+        <div class="main-content">
+
+            <div class="modal fade" id="panel-config" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title">Panel Configuration</h4>
+                        </div>
+                        <div class="modal-body">
+                            Here will be a configuration form
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                Save changes
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">邱运兰专用</h4>
+
+                                <div class="panel-tools">
+                                    <div class="dropdown">
+                                        <a data-toggle="dropdown"
+                                           class="btn btn-xs dropdown-toggle btn-transparent-grey">
+                                            <i class="fa fa-cog"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-light pull-right" role="menu">
+                                            <li>
+                                                <a class="panel-collapse collapses" href="#"><i
+                                                        class="fa fa-angle-up"></i> <span>Collapse</span> </a>
+                                            </li>
+                                            <li>
+                                                <a class="panel-refresh" href="#">
+                                                    <i class="fa fa-refresh"></i> <span>Refresh</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="panel-config" href="#panel-config" data-toggle="modal">
+                                                    <i class="fa fa-wrench"></i> <span>Configurations</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="panel-expand" href="#">
+                                                    <i class="fa fa-expand"></i> <span>Fullscreen</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a class="btn btn-xs btn-link panel-close" href="#">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <p>
+                                    	输入你需要的数据，并以<strong>空格</strong>隔开；<strong>谨记</strong>不能以空格开头,如生成的数据不对，请核实后重新生成！
+                                </p>
+                                <div class="row">
+							        <div class="col-md-12" style="height: 120px;background-color: white">
+							            <div class="input-group">
+							                <span class="input-group-addon" id="basic-addon1">亮度</span>
+							                <input id="ld" type="text" class="form-control" placeholder="请输入亮度组数据并以空格隔开" aria-describedby="basic-addon1">
+							            </div>
+							            <div class="input-group">
+							                <span class="input-group-addon" id="basic-addon2">波长</span>
+							                <input id="bc" type="text" class="form-control" placeholder="请输入波长组数据并以空格隔开" aria-describedby="basic-addon2">
+							            </div>
+							            <div class="input-group">
+							                <span class="input-group-addon" id="basic-addon3">电压</span>
+							                <input id="dy" type="text" class="form-control" placeholder="请输入电压组数据并以空格隔开" aria-describedby="basic-addon3">
+							            </div>
+							            <button id="sub">预览数据</button>
+							        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 space20">
+                                        <div class="btn-group pull-right">
+                                            <button data-toggle="dropdown" class="btn btn-green dropdown-toggle">
+                                                Export <i class="fa fa-angle-down"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-light pull-right">
+                                               <!-- <li>
+                                                    <a href="#" class="export-csv" data-table="#sample-table-1">
+                                                        Save as CSV
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="export-txt" data-table="#sample-table-1">
+                                                        Save as TXT
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="export-xml" data-table="#sample-table-1">
+                                                        Save as XML
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="export-sql" data-table="#sample-table-1">
+                                                        Save as SQL
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="export-json" data-table="#sample-table-1">
+                                                        Save as JSON
+                                                    </a>
+                                                </li>-->
+                                                <li>
+                                                    <a href="#" class="export-excel" data-table="#sample-table-1">
+                                                        	导出Excel
+                                                    </a>
+                                                </li>
+<!--                                                <li>
+                                                    <a href="#" class="export-doc" data-table="#sample-table-1">
+                                                        Export to Word
+                                                    </a>
+                                                </li>-->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="sample-table-1">
+                                        <thead>
+                                            <tr>
+                                            <th></th>
+                                            <th>亮度</th>
+                                            <th>波长</th>
+                                            <th>电压</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tbd">
+                                        <!--<tr>
+                                            <td>你好简体，飞</td>
+                                            <td>你好繁體，飛</td>
+                                            <td>March 24, 2014</td>
+                                            <td>飛1</td>
+                                        </tr>
+                                            <tr>
+                                            <td>India范德萨发生大水电费</td>
+                                            <td>1,241,900,000</td>
+                                            <td>March 24, 2014</td>
+                                            <td>法克</td>
+                                        </tr>
+                                            <tr>
+                                            <td>United States就换个方式</td>
+                                            <td>317,746,000</td>
+                                            <td>这, 2014</td>
+                                            <td>4.44</td>
+                                        </tr>
+                                            <tr>
+                                            <td>Indonesia</td>
+                                            <td>249,866,000</td>
+                                            <td>July 1, 2013</td>
+                                            <td>3.49</td>
+                                        </tr>
+                                            <tr>
+                                            <td>Brazil</td>
+                                            <td>201,032,714</td>
+                                            <td>July 1, 2013</td>
+                                            <td>2.81</td>
+                                        </tr>-->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--[if lt IE 9]>
+<script src="assets/plugins/respond.min.js"></script>
+<script src="assets/plugins/excanvas.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jQuery/jquery-1.11.1.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script src="assets/plugins/jQuery/jquery-2.1.1.min.js"></script>
+<!--<![endif]-->
+<script src="assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/plugins/blockUI/jquery.blockUI.js"></script>
+<script src="assets/plugins/iCheck/jquery.icheck.min.js"></script>
+<script src="assets/plugins/moment/min/moment.min.js"></script>
+<script src="assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
+<script src="assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js"></script>
+<script src="assets/plugins/bootbox/bootbox.min.js"></script>
+<script src="assets/plugins/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+<script src="assets/plugins/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+<script src="assets/plugins/jquery.appear/jquery.appear.js"></script>
+<script src="assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+<script src="assets/plugins/velocity/jquery.velocity.min.js"></script>
+<script src="assets/plugins/TouchSwipe/jquery.touchSwipe.min.js"></script>
+
+<script type="text/javascript" src="assets/plugins/select2/select2.min.js"></script>
+<script src="assets/plugins/tableExport/tableExport.js"></script>
+<script src="assets/plugins/tableExport/jquery.base64.js"></script>
+<script src="assets/plugins/tableExport/html2canvas.js"></script>
+<script src="assets/plugins/tableExport/jspdf/libs/sprintf.js"></script>
+<script src="assets/plugins/tableExport/jspdf/jspdf.js"></script>
+<script src="assets/plugins/tableExport/jspdf/libs/base64.js"></script>
+<script src="assets/js/table-export.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+<script>
+    jQuery(document).ready(function () {
+    	$('#sub').on('click',function(){
+
+    		var tbd_html = dd(); 
+    		$('#tbd').empty()
+			$('#tbd').append(tbd_html);
+    	});
+        Main.init();
+        TableExport.init();
+        setInterval("tip()",3600000);
+    });
+    function dd(){
+			var ld = $('#ld').val().trim();
+    		var bc = $('#bc').val();
+    		var dy = $('#dy').val();
+    		var ld_data =  ld.split(" ")||['a'];
+    		var bc_data = [];
+    		bc_data = bc.split(" ")||['a']
+    		var dy_data = [];
+    		dy_data = dy.split(" ")||['a']
+    		//alert(ld_data)
+    		var temp ='';
+    
+    		var rownum=1;
+    		for(var i = 0;i<ld_data.length;i++){
+    			for(var j = 0;j<bc_data.length;j++){
+    				for(var k = 0;k<dy_data.length;k++){
+						temp +='<tr>'+
+								'<td>'+(rownum++)+'</td>'+
+								'<td>'+ld_data[i]+'</td>'+
+								'<td>'+bc_data[j]+'</td>'+
+								'<td>'+dy_data[k]+'</td>'+
+								'</tr>'
+					}
+    			}
+    		}
+    			//alert(temp);
+    			return temp;
+    			
+	}
+    function tip(){
+    	alert("妞，你已经连续用眼一个小时，请注意保护好眼睛！休息十分钟，看看窗外的蓝天，抖抖腿！");
+    }
+</script>
+</body>
+
+</html>
